@@ -8,7 +8,7 @@
 import UIKit
 import SDWebImage
 
-class TitleCollectionViewCell: UICollectionViewCell {
+final class TitleCollectionViewCell: UICollectionViewCell {
     
     static let identifier = "TitleCollectionViewCell"
     
@@ -42,7 +42,9 @@ class TitleCollectionViewCell: UICollectionViewCell {
         guard let url = URL(string: "https://image.tmdb.org/t/p/w500\(model)") else {
             return
         }
+        // SDWebImage라이브러리를 사용해서 캐싱을 해서 이미지 로드
         posterImageView.sd_setImage(with: url)
+        // 캐싱은 없지만 url로 이미지를 요청하는 코드
 //        DispatchQueue.global().async {
 //            guard let data = try? Data(contentsOf: url) else { return }
 //            DispatchQueue.main.async {

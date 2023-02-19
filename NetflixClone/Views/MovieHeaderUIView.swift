@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MovieHeaderUIView: UIView {
+final class MovieHeaderUIView: UIView {
     
     private let downloadButton: UIButton = {
         let button = UIButton()

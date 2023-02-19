@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CollectionViewTableViewCell: UITableViewCell {
+final class CollectionViewTableViewCell: UITableViewCell {
 
     static let identifier = "CollectionViewTableViewCell"
     
@@ -46,7 +46,7 @@ class CollectionViewTableViewCell: UITableViewCell {
         self.titles = titles
         DispatchQueue.main.async { [weak self] in
             self?.collectionView.reloadData()
-        }
+        } 
     }
 }
 
