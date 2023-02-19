@@ -15,22 +15,18 @@ class MainTabBarVeiwController: UITabBarController {
         let vc1 = UINavigationController(rootViewController: HomeViewController())
         let vc2 = UINavigationController(rootViewController: UpcomingViewController())
         let vc3 = UINavigationController(rootViewController: SearchViewController())
-        let vc4 = UINavigationController(rootViewController: DownloadViewController())
         
         vc1.tabBarItem.image = UIImage(systemName: "house")
         vc2.tabBarItem.image = UIImage(systemName: "play.circle")
         vc3.tabBarItem.image = UIImage(systemName: "magnifyingglass")
-        vc4.tabBarItem.image = UIImage(systemName: "arrow.down.to.line")
         
-        vc1.tabBarItem.title = "Home"
-        vc2.tabBarItem.title = "Coming Soon"
-        vc3.tabBarItem.title = "Top Search"
-        vc4.tabBarItem.title = "Downloads"
-        
+        vc1.tabBarItem.title = "홈"
+        vc2.tabBarItem.title = "공개 예정"
+        vc3.tabBarItem.title = "검색"
         
         tabBar.tintColor = .label
         
-        setViewControllers([vc1,vc2, vc3, vc4], animated: true)
+        setViewControllers([vc1,vc2, vc3], animated: true)
 
     }
 }

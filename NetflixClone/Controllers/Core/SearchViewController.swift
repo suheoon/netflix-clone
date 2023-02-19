@@ -21,14 +21,14 @@ final class SearchViewController: UIViewController {
     private let searchController: UISearchController = {
         
         let controller = UISearchController(searchResultsController: SearchResultsViewController())
-        controller.searchBar.placeholder = "Search for a Movie or a Tv show"
+        controller.searchBar.placeholder = "영화 또는 드라마 제목을 검색해주세요"
         controller.searchBar.searchBarStyle = .minimal
         return controller
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Search"
+        title = "검색"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .always
         
